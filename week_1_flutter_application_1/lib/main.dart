@@ -24,7 +24,20 @@ class BingeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // A Container with black color provides the background since there is no Scaffold
-    return Container(color: Colors.black, child: Text("BingeScreen"));
+    return Scaffold(
+      // The AppBar handles the status bar and notch area automatically
+      appBar: AppBar(
+        title: const Text('BingeFlix'),
+        // Set the background color to white to match your image
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black, // Makes the text/icons black
+        elevation: 0, // Removes the shadow for a flat look
+      ),
+      // Set the main background of the Scaffold to white
+      backgroundColor: Colors.white,
+      body: const Center(
+        child: Text(''), // Empty body to match the white screen
+      ),
+    );
   }
 }
